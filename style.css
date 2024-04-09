@@ -1,0 +1,493 @@
+@font-face {
+    font-family: PP mori;
+    src: url(./ppmori.ttf);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:PP mori;
+    color:#fff;
+}
+html,body{
+    height:100%;
+    width:100%; 
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #EDBFFF;
+    border-radius: 50%;
+    border: none;
+    /*Note For cursor always make the position fixed*/
+    position:fixed;
+    /*Z index is used to show the cursor at priority*/
+    z-index: 8;
+    /*To chanage color we use this property*/
+    mix-blend-mode: difference;
+    /*Transition is used to move the cursor or to change the state of cursor smoothly*/
+    transition: background-image ease 1s; 
+    background-position: center; 
+    background-size: cover;
+}
+.crsr-change{
+    height: 25px;
+    width: 90px;
+    background-color: #EDBFFF;
+    border-radius: 50px;
+    border: none;
+    /*Note For cursor always make the position fixed*/
+    position:fixed;
+    /*Z index is used to show the cursor at priority*/
+    z-index: 9;
+    /*To chanage color we use this property*/
+    mix-blend-mode: difference;
+}
+
+.main{
+    background-color: #0F0D0D;
+    cursor: none;
+
+}
+.page1{
+    min-height:100vh;
+    width:100%;
+    position: relative;
+    z-index: 9;
+    padding-top: 12vw;
+}
+/* #purple{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 102;
+    opacity: 0;
+    display: none;
+    transition: opacity ease 1s;
+} */
+#nav{
+    height: 46px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    /*To make navbar fixed we to set the position fixed*/
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 99;
+}
+#nav img{
+    height: 46px;
+    border-radius: 15px;
+    background-color: #fff;
+    margin-top: 25px;
+}
+#nav-part2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+
+}
+#nav #circle{
+    height:25px;
+    width:25px;
+    border-radius:20%;
+    background-color:#fff;
+    margin-top: 25px;
+}
+ 
+
+#nav h4{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+   
+}
+
+/*Login or Sign up*/
+#nav-part3 .dropdown{
+    position: relative;
+    display: inline-block;
+    margin-right:90px;
+    
+}
+
+.dropdown-content {
+    
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    
+    
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+  }
+  /* .dropdown-content a:hover {background-color: #dbcfcf; }     */
+
+  #circle:hover{
+    transform: perspective(360px) translateZ(100px);
+}
+ 
+.page1 h1{
+    font-size: 10vh;
+    font-weight: 300;
+    font-family: PP mori;
+    margin-left: 6vw;
+}
+.page1 h2{
+    font-size: 10vh;
+    font-weight: 300;
+    font-family: PP mori;
+    margin-left: 24vw;
+}
+.page1 video{
+    margin-top: 14vw;
+    width:50%;
+    position: relative;
+    left: 50%;
+    /* to make it center */
+    transform: translate(-50%,0); 
+}
+
+.page2{
+    min-height:80vh;
+    width:100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #dacfcf;
+    position: relative;
+    z-index: 9;
+}
+
+.page2 h1{
+    font-size: 6vw;
+    font-weight:650;
+    color:#EDBFFF;
+    position: relative;
+}
+.page2 h1::before{
+    content: "We are Cosmo Cosmetics.You could find your Collection.Everything For your party, Office,Wedding or Casual.";/*This is mandatory*/
+    position: absolute;
+    color: #000;
+    top: -4px;
+    left: -5px;
+    z-index: -1;
+}
+.scroller h1{
+    display: inline;
+}
+.page2-container{
+    height:60vh;
+    width:100%;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.page2-left{
+    /* background-color: blue; */
+    width:41%;
+}
+.page2-right{
+    /* background-color: blue; */
+    width:32%;
+}
+.page2-left h2{
+    font-size: 5vw;
+    font-weight: 100;
+    color: #111;
+    line-height: 5vw;
+}
+.page2-right p{
+    font-size: 30px;
+    font-weight: 200;  
+    color: #111;  
+    
+}
+.page2-right button{
+    width:100%;
+    border-radius:50px;
+    padding:8px 0;
+    border:none;
+    background-color: #EDBFFF;
+    color:#111;
+    font-weight: 800;
+    margin-top:40px;
+    
+    
+}
+
+.page2-right button:hover{
+    background-color: #f3d7fe;
+    transform: perspective(180px)  translateZ(20px); 
+}
+
+/*Page 3 */
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    border-bottom: 3px solid #585454;
+    /*Always make position relative of parent*/
+    position: relative;
+    z-index: 9;
+}
+
+.page3 h1{
+    font-size: 6.8vw;
+    font-weight:200;
+    color: #111;
+    margin-left: 100px;
+
+}
+.page3-part1{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+.page3-part1 img{
+    height: 560px;
+    width: 560px;
+    margin-left: 100px;
+    margin-right: 15px;
+    margin-top: 250px;
+
+}
+
+.page3-part1 video{
+    height: 650px;
+    width: 650px;
+    margin-right: 100px;
+    padding-bottom: 250px;
+   
+}
+.page3-part2{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+.page3-part2 img{
+    height: 360px;
+    width: 560px;
+    margin-right: 200px;
+    margin-bottom: 350px;
+}
+.page3-part2 video{
+    height: 850px;
+    width: 650px;
+    margin-left: 100px;
+    margin-right: 15px;
+    padding-top: 150px;
+   
+}
+
+.page3-part3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+.page3-part3 h2{
+    font-size: 9.8vh;
+    color: #111;
+    margin-left: 180px;
+    font-weight: 200;
+}
+.h2-box{
+    height:190px;
+    width:950px;
+    padding-right: 80px;
+    padding-top: 50px;
+    background-color:var(--background-color);
+    border: none;
+    margin: 15px ;
+    border-radius: 10px 26px 10px 26px;
+    position:relative;
+    animation-name: rightmovement;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+@keyframes rightmovement {
+    from{
+        top:0px;
+        left: 0px;
+    }
+    to{
+        top: 0px;
+        left: 366px;
+        background-color:#EDBFFF;
+    }
+    
+}
+.page3-part3 button{
+    height: 240px;
+    width: 240px;
+    border-radius:50%;
+    margin-right: 180px;
+    border:none;
+    background-color: #EDBFFF;
+    color:#111;
+    font-size: 26px;
+    font-weight: 600;
+
+}
+.page3-part3 button:hover{
+    background-color: #f3d7fe;
+    transform: perspective(180px) scaleX(1) rotateY(10deg) rotateX(10deg) translateZ(-50px); 
+}
+
+/*Page 4 Animation Things*/
+.page4{
+    margin-top: 80px;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    /*Always make position relative of parent*/
+    position: relative;
+    z-index: 9;
+    padding: 140px 100px;
+    border-bottom: 3px solid #585454;
+}
+
+
+.elem{
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+
+}
+.elem #left-img{
+    height: 400px;
+    width: 350px;
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+
+}
+.elem #right-img{
+    height: 400px;
+    width: 350px;
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+
+}
+.elem img:nth-child(1){
+    left: 1%;
+}
+.elem img:nth-child(3){
+    right: 2%;
+}
+.text-div{
+    /* background-color: lightblue; */
+    height: 119px;
+    overflow: hidden;
+}
+.elem h1{
+    font-size: 6.9vw;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+}
+
+
+.elem:hover h1{
+    transform: translateY(-100%);
+    color: #EDBFFF;
+
+}
+.elem:hover #left-img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+.elem:hover #right-img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+
+.page5{
+    min-height: 140vh;
+    width: 100%;  
+    border-bottom: 3px solid #585454; 
+    padding: 140px 100px; 
+}
+.page5 h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 96px;
+    padding: 0 20px;
+    border-top: 1.4px solid #dadada;
+
+}
+.box:nth-last-child(1){
+    border-bottom: 1.4px solid #dadada;
+}
+.footer{
+    height: 60vh;
+    width: 100%;
+    background-color: #EDBFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+   
+  
+}
+#footer-part1{
+    margin-bottom: 200px;
+}
+#footer-part2{
+    margin-bottom: 200px;
+}
+#footer-part1 span{
+    font-size: 50px;   
+    font-weight: 500;
+    color: #0F0D0D;
+}
+#footer-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+#footer-part2 i{
+    background-color: #111;
+    font-size: 28px;
+    border-radius: 5px;
+    
+}
+
+#footer-part2 i:hover{
+    box-shadow: 5px 5px 11px 10px white;
+}
